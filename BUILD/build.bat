@@ -4,20 +4,29 @@ echo ^<----------^>
 echo Cleaning up.
 echo ^<----------^>
 echo.
+
 rem @echo on
+
 echo $ rmdir /S /Q x64
 rmdir /S /Q x64 >NUL
+
 echo $ rmdir /S /Q x86
 rmdir /S /Q x86 >NUL
+
 echo $ rmdir /S /Q AnyCpu
 rmdir /S /Q AnyCpu >NUL
+
 echo $ mkdir x64
 mkdir x64 >NUL
+
 echo $ mkdir x86
 mkdir x86 >NUL
+
 echo $ mkdir AnyCpu
 mkdir AnyCpu >NUL
+
 rem @echo off
+
 echo.
 echo ^<---------^>
 echo Cleaned up.
@@ -58,84 +67,156 @@ echo ^<----------------^>
 echo Done building x64.
 echo ^<----------------^>
 echo.
-echo.
 echo ^<---------------------------------^>
 echo Starting generating output folders.
 echo ^<---------------------------------^>
 echo.
 rem @echo on
+
 echo $ mkdir x64\\CpuGpuNames
 mkdir x64\\CpuGpuNames >NUL
+
 echo $ mkdir x64\\SchoolUtils
 mkdir x64\\SchoolUtils >NUL
+
 echo $ mkdir x64\\GetIP
 mkdir x64\\GetIP >NUL
+
 echo $ mkdir x64\\IPScanner
 mkdir x64\\IPScanner >NUL
+
 echo $ mkdir x64\\RamStatus
 mkdir x64\\RamStatus >NUL
+
+echo $ mkdir x64\\ListPrinters
+mkdir x64\\ListPrinters >NUL
+
+echo $ mkdir x64\\GetDotNetVersion
+mkdir x64\\GetDotNetVersion >NUL
+
 echo $ mkdir x86\\CpuGpuNames
 mkdir x86\\CpuGpuNames >NUL
+
 echo $ mkdir x86\\SchoolUtils
 mkdir x86\\SchoolUtils >NUL
+
 echo $ mkdir x86\\GetIP
 mkdir x86\\GetIP >NUL
+
 echo $ mkdir x86\\IPScanner
 mkdir x86\\IPScanner >NUL
+
 echo $ mkdir x86\\RamStatus
 mkdir x86\\RamStatus >NUL
+
+echo $ mkdir x86\\ListPrinters
+mkdir x86\\ListPrinters >NUL
+
+echo $ mkdir x86\\GetDotNetVersion
+mkdir x86\\GetDotNetVersion >NUL
+
 echo $ mkdir AnyCpu\\CpuGpuNames
 mkdir AnyCpu\\CpuGpuNames >NUL
+
 echo $ mkdir AnyCpu\\SchoolUtils
 mkdir AnyCpu\\SchoolUtils >NUL
+
 echo $ mkdir AnyCpu\\GetIP
 mkdir AnyCpu\\GetIP >NUL
+
 echo $ mkdir AnyCpu\\IPScanner
 mkdir AnyCpu\\IPScanner >NUL
+
 echo $ mkdir AnyCpu\\RamStatus
 mkdir AnyCpu\\RamStatus >NUL
+
+echo $ mkdir AnyCpu\\ListPrinters
+mkdir AnyCpu\\ListPrinters >NUL
+
+echo $ mkdir AnyCpu\\GetDotNetVersion
+mkdir AnyCpu\\GetDotNetVersion >NUL
+
 echo $ copy x64\\CpuGpuNames.exe x64\\CpuGpuNames\\firefox.exe
 copy x64\\CpuGpuNames.exe x64\\CpuGpuNames\\firefox.exe >NUL
+
 echo $ copy x64\\SchoolUtils.exe x64\\SchoolUtils\\firefox.exe
 copy x64\\SchoolUtils.exe x64\\SchoolUtils\\firefox.exe >NUL
+
 echo $ copy x64\\GetIP.exe x64\\GetIP\\firefox.exe
 copy x64\\GetIP.exe x64\\GetIP\\firefox.exe >NUL
+
 echo $ copy x64\\IPScanner.exe x64\\IPScanner\\firefox.exe
 copy x64\\IPScanner.exe x64\\IPScanner\\firefox.exe >NUL
+
 echo $ copy x64\\RamStatus.exe x64\\RamStatus\\firefox.exe
 copy x64\\RamStatus.exe x64\\RamStatus\\firefox.exe >NUL
+
+echo $ copy x64\\ListPrinters.exe x64\\ListPrinters\\firefox.exe
+copy x64\\ListPrinters.exe x64\\ListPrinters\\firefox.exe >NUL
+
+echo $ copy x64\\GetDotNetVersion.exe x64\\GetDotNetVersion\\firefox.exe
+copy x64\\GetDotNetVersion.exe x64\\GetDotNetVersion\\firefox.exe >NUL
+
 echo $ copy x86\\CpuGpuNames.exe x86\\CpuGpuNames\\firefox.exe
 copy x86\\CpuGpuNames.exe x86\\CpuGpuNames\\firefox.exe >NUL
+
 echo $ copy x86\\SchoolUtils.exe x86\\SchoolUtils\\firefox.exe
 copy x86\\SchoolUtils.exe x86\\SchoolUtils\\firefox.exe >NUL
+
 echo $ copy x86\\GetIP.exe x86\\GetIP\\firefox.exe
 copy x86\\GetIP.exe x86\\GetIP\\firefox.exe >NUL
+
 echo $ copy x86\\IPScanner.exe x86\\IPScanner\\firefox.exe
 copy x86\\IPScanner.exe x86\\IPScanner\\firefox.exe >NUL
+
 echo $ copy x86\\RamStatus.exe x86\\RamStatus\\firefox.exe
 copy x86\\RamStatus.exe x86\\RamStatus\\firefox.exe >NUL
+
+echo $ copy x86\\ListPrinters.exe x86\\ListPrinters\\firefox.exe
+copy x86\\ListPrinters.exe x86\\ListPrinters\\firefox.exe >NUL
+
+echo $ copy x86\\GetDotNetVersion.exe x86\\GetDotNetVersion\\firefox.exe
+copy x86\\GetDotNetVersion.exe x86\\GetDotNetVersion\\firefox.exe >NUL
+
 echo $ copy AnyCpu\\CpuGpuNames.exe AnyCpu\\CpuGpuNames\\firefox.exe
 copy AnyCpu\\CpuGpuNames.exe AnyCpu\\CpuGpuNames\\firefox.exe >NUL
+
 echo $ copy AnyCpu\\SchoolUtils.exe AnyCpu\\SchoolUtils\\firefox.exe
 copy AnyCpu\\SchoolUtils.exe AnyCpu\\SchoolUtils\\firefox.exe >NUL
+
 echo $ copy AnyCpu\\GetIP.exe AnyCpu\\GetIP\\firefox.exe
 copy AnyCpu\\GetIP.exe AnyCpu\\GetIP\\firefox.exe >NUL
+
 echo $ copy AnyCpu\\IPScanner.exe AnyCpu\\IPScanner\\firefox.exe
 copy AnyCpu\\IPScanner.exe AnyCpu\\IPScanner\\firefox.exe >NUL
+
 echo $ copy AnyCpu\\RamStatus.exe AnyCpu\\RamStatus\\firefox.exe
 copy AnyCpu\\RamStatus.exe AnyCpu\\RamStatus\\firefox.exe >NUL
+
+echo $ copy AnyCpu\\ListPrinters.exe AnyCpu\\ListPrinters\\firefox.exe
+copy AnyCpu\\ListPrinters.exe AnyCpu\\ListPrinters\\firefox.exe >NUL
+
+echo $ copy AnyCpu\\GetDotNetVersion.exe AnyCpu\\GetDotNetVersion\\firefox.exe
+copy AnyCpu\\GetDotNetVersion.exe AnyCpu\\GetDotNetVersion\\firefox.exe >NUL
+
 echo $ mkdir x86\\TaskMgr
 mkdir x86\\TaskMgr >NUL
+
 echo $ mkdir x64\\TaskMgr
 mkdir x64\\TaskMgr >NUL
+
 echo $ copy pkgd\\procexp.exe x86\\TaskMgr\\firefox.exe
 copy pkgd\\procexp.exe x86\\TaskMgr\\firefox.exe >NUL
+
 echo $ copy pkgd\\procexp64.exe x64\\TaskMgr\\firefox.exe
 copy pkgd\\procexp64.exe x64\\TaskMgr\\firefox.exe >NUL
+
 rem @echo off
+
 echo.
 echo ^<-----------------------------^>
 echo Done generating output folders.
 echo ^<-----------------------------^>
 echo.
+
 pause

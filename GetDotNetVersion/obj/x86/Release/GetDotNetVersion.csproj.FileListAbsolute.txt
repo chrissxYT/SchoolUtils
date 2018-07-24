@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolUtils\BUILD\x86\GetDotNetVersion.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\x86\GetDotNetVersion.exe
+D:\workspace_VS\SchoolUtils\BUILD\x86\GetDotNetVersion.pdb
+D:\workspace_VS\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.exe
+D:\workspace_VS\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.pdb
+D:\workspace_VS\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.csprojAssemblyReference.cache

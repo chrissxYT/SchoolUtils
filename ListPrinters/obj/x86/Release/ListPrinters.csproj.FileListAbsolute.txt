@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolUtils\BUILD\x86\ListPrinters.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\x86\ListPrinters.exe
+D:\workspace_VS\SchoolUtils\BUILD\x86\ListPrinters.pdb
+D:\workspace_VS\SchoolUtils\ListPrinters\obj\x86\Release\ListPrinters.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\ListPrinters\obj\x86\Release\ListPrinters.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\ListPrinters\obj\x86\Release\ListPrinters.exe
+D:\workspace_VS\SchoolUtils\ListPrinters\obj\x86\Release\ListPrinters.pdb
