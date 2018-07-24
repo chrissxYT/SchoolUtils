@@ -1,0 +1,14 @@
+D:\workspace_VS\RamStatus\RamStatus\bin\x64\Release\RamStatus.exe.config
+D:\workspace_VS\RamStatus\RamStatus\bin\x64\Release\RamStatus.exe
+D:\workspace_VS\RamStatus\RamStatus\bin\x64\Release\RamStatus.pdb
+D:\workspace_VS\RamStatus\RamStatus\obj\x64\Release\RamStatus.csprojAssemblyReference.cache
+D:\workspace_VS\RamStatus\RamStatus\obj\x64\Release\RamStatus.csproj.CoreCompileInputs.cache
+D:\workspace_VS\RamStatus\RamStatus\obj\x64\Release\RamStatus.exe
+D:\workspace_VS\RamStatus\RamStatus\obj\x64\Release\RamStatus.pdb
+D:\workspace_VS\SchoolUtils\BUILD\x64\RamStatus.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\x64\RamStatus.exe
+D:\workspace_VS\SchoolUtils\BUILD\x64\RamStatus.pdb
+D:\workspace_VS\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.exe
+D:\workspace_VS\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.pdb

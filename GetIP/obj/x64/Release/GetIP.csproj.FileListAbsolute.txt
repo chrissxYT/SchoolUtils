@@ -1,0 +1,10 @@
+D:\workspace_VS\SchoolUtils\GetIP\bin\x64\Release\GetIP.exe.config
+D:\workspace_VS\SchoolUtils\GetIP\bin\x64\Release\GetIP.exe
+D:\workspace_VS\SchoolUtils\GetIP\bin\x64\Release\GetIP.pdb
+D:\workspace_VS\SchoolUtils\GetIP\obj\x64\Release\GetIP.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\GetIP\obj\x64\Release\GetIP.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\GetIP\obj\x64\Release\GetIP.exe
+D:\workspace_VS\SchoolUtils\GetIP\obj\x64\Release\GetIP.pdb
+D:\workspace_VS\SchoolUtils\BUILD\x64\GetIP.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\x64\GetIP.exe
+D:\workspace_VS\SchoolUtils\BUILD\x64\GetIP.pdb

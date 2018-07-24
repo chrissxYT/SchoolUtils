@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\IPScanner.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\IPScanner.exe
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\IPScanner.pdb
+D:\workspace_VS\SchoolUtils\IPScanner\obj\Release\IPScanner.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\IPScanner\obj\Release\IPScanner.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\IPScanner\obj\Release\IPScanner.exe
+D:\workspace_VS\SchoolUtils\IPScanner\obj\Release\IPScanner.pdb

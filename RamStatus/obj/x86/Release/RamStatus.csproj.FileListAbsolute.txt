@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolUtils\BUILD\x86\RamStatus.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\x86\RamStatus.exe
+D:\workspace_VS\SchoolUtils\BUILD\x86\RamStatus.pdb
+D:\workspace_VS\SchoolUtils\RamStatus\obj\x86\Release\RamStatus.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\RamStatus\obj\x86\Release\RamStatus.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\RamStatus\obj\x86\Release\RamStatus.exe
+D:\workspace_VS\SchoolUtils\RamStatus\obj\x86\Release\RamStatus.pdb

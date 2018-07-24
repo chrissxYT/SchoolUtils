@@ -1,0 +1,13 @@
+D:\workspace_VS\CpuGpuNames\CpuGpuNames\bin\Release\CpuGpuNames.exe.config
+D:\workspace_VS\CpuGpuNames\CpuGpuNames\bin\Release\CpuGpuNames.exe
+D:\workspace_VS\CpuGpuNames\CpuGpuNames\bin\Release\CpuGpuNames.pdb
+D:\workspace_VS\CpuGpuNames\CpuGpuNames\obj\Release\CpuGpuNames.csproj.CoreCompileInputs.cache
+D:\workspace_VS\CpuGpuNames\CpuGpuNames\obj\Release\CpuGpuNames.exe
+D:\workspace_VS\CpuGpuNames\CpuGpuNames\obj\Release\CpuGpuNames.pdb
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\CpuGpuNames.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\CpuGpuNames.exe
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\CpuGpuNames.pdb
+D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.exe
+D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.pdb

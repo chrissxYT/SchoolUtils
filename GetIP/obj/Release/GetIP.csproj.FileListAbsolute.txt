@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\GetIP.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\GetIP.exe
+D:\workspace_VS\SchoolUtils\BUILD\AnyCpu\GetIP.pdb
+D:\workspace_VS\SchoolUtils\GetIP\obj\Release\GetIP.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\GetIP\obj\Release\GetIP.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\GetIP\obj\Release\GetIP.exe
+D:\workspace_VS\SchoolUtils\GetIP\obj\Release\GetIP.pdb
