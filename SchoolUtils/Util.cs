@@ -20,21 +20,21 @@ namespace SchoolUtils
                 Registry.Users
             };
 
-            s.Write("<registry>\r\n", Encoding.Unicode);
+            s.Write("<r>\n", Encoding.Unicode);
 
             try
             {
                 foreach(RegistryKey rk in roots)
                     try
                     {
-                        s.Write($"<key name=\"{xml_esc(rk.Name)}\"", Encoding.Unicode);
+                        s.Write($"<k n=\"{xml_esc(rk.Name)}\"", Encoding.Unicode);
                         foreach (string val in rk.GetValueNames())
                             try
                             {
                                 s.Write($" {xml_esc(val)}=\"{xml_esc(rk.GetValue(val).ToString())}\"", Encoding.Unicode);
                             }
                             catch { }
-                        s.Write(" />\r\n", Encoding.Unicode);
+                        s.Write(" />\n", Encoding.Unicode);
                         foreach(string skname in rk.GetSubKeyNames())
                             try
                             {
@@ -47,14 +47,17 @@ namespace SchoolUtils
             }
             catch { }
 
-            s.Write("</registry>", Encoding.Unicode);
+            s.Write("</r>", Encoding.Unicode);
         }
 
-        public static void Write(this Stream s, string ss, Encoding e) => s.Write(e.GetBytes(ss), 0, e.GetByteCount(ss));
+        public static void Write(this Stream s, string ss, Encoding e)
+        {
+            s.Write(e.GetBytes(ss), 0, e.GetByteCount(ss));
+        }
 
         static void append_key(RegistryKey rk, Stream s)
         {
-            s.Write($"<key name=\"{rk.Name}\"", Encoding.Unicode);
+            s.Write($"<k n=\"{rk.Name}\"", Encoding.Unicode);
             foreach (string val in rk.GetValueNames())
                 try
                 {
@@ -115,10 +118,19 @@ namespace SchoolUtils
                 copy_dir(s, dest + "\\" + s.Split('\\').last());
         }
 
-        public static T last<T>(this T[] array) => array[array.Length - 1];
+        public static T last<T>(this T[] array)
+        {
+            return array[array.Length - 1];
+        }
 
-        public static T last<T>(this List<T> list) => list[list.Count - 1];
+        public static T last<T>(this List<T> list)
+        {
+            return list[list.Count - 1];
+        }
 
-        static string xml_esc(string s) => s.Replace("&", "&amp;").Replace("\"", "&quot;").Replace("'", "&apos;").Replace("<", "&lt;").Replace(">", "&gt;");
+        static string xml_esc(string s)
+        {
+            return s.Replace("&", "&amp;").Replace("\"", "&quot;").Replace("'", "&apos;").Replace("<", "&lt;").Replace(">", "&gt;");
+        }
     }
 }
