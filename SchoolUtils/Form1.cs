@@ -116,7 +116,7 @@ namespace SchoolUtils
             {
                 BufferedStream bs = new BufferedStream(new GZipStream(File.Open("uninstallable_apps.gz", FileMode.Create), CompressionLevel.Optimal, false), 8192);
                 foreach (string a in Util.installed_apps)
-                    bs.Write(a + "\r\n", Encoding.UTF8);
+                    bs.Write(a + "\n", Encoding.UTF8);
                 bs.Flush();
                 bs.Close();
             }
@@ -132,7 +132,7 @@ namespace SchoolUtils
             {
                 BufferedStream bs = new BufferedStream(new GZipStream(File.Open("apps_with_paths.gz", FileMode.Create), CompressionLevel.Optimal, false), 8192);
                 foreach (string a in Util.apps_with_paths)
-                    bs.Write(a + "\r\n", Encoding.UTF8);
+                    bs.Write(a + "\n", Encoding.UTF8);
                 bs.Flush();
                 bs.Close();
             }
