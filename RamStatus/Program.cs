@@ -63,7 +63,7 @@ namespace RamStatus
                         }
                         catch (Exception e)
                         {
-                            fs.w("Error in 0");
+                            fs.w("Error in 0:");
                             fs.w(e.ToString());
                         }
                     }
@@ -71,7 +71,7 @@ namespace RamStatus
             }
             catch (Exception e)
             {
-                fs.w("Error in 1");
+                fs.w("Error in 1:");
                 fs.w(e.ToString());
             }
             fs.Close();
@@ -79,7 +79,7 @@ namespace RamStatus
 
         static void w(this FileStream fs, string s)
         {
-            s += "\r\n";
+            s += "\n";
             fs.Write(Encoding.UTF8.GetBytes(s), 0, Encoding.UTF8.GetByteCount(s));
         }
     }
