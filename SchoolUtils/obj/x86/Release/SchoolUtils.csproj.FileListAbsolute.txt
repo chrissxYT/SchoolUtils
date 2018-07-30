@@ -16,3 +16,14 @@ D:\workspace_VS\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.pdb
 D:\workspace_VS\SchoolUtils\BUILD\x86\SchoolUtils.exe.config
 D:\workspace_VS\SchoolUtils\BUILD\x86\SchoolUtils.exe
 D:\workspace_VS\SchoolUtils\BUILD\x86\SchoolUtils.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\SchoolUtils.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\SchoolUtils.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\SchoolUtils.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.Form1.resources
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.Properties.Resources.resources
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.csproj.GenerateResource.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.csproj.CopyComplete
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\SchoolUtils\obj\x86\Release\SchoolUtils.pdb

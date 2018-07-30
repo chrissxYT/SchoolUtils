@@ -5,3 +5,10 @@ D:\workspace_VS\SchoolUtils\ListPrinters\obj\x64\Release\ListPrinters.csprojAsse
 D:\workspace_VS\SchoolUtils\ListPrinters\obj\x64\Release\ListPrinters.csproj.CoreCompileInputs.cache
 D:\workspace_VS\SchoolUtils\ListPrinters\obj\x64\Release\ListPrinters.exe
 D:\workspace_VS\SchoolUtils\ListPrinters\obj\x64\Release\ListPrinters.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\ListPrinters.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\ListPrinters.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\ListPrinters.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\ListPrinters\obj\x64\Release\ListPrinters.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\ListPrinters\obj\x64\Release\ListPrinters.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\ListPrinters\obj\x64\Release\ListPrinters.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\ListPrinters\obj\x64\Release\ListPrinters.pdb

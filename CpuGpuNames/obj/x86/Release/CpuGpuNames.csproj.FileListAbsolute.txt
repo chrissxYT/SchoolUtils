@@ -11,3 +11,10 @@ D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\x86\Release\CpuGpuNames.csprojAssemb
 D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\x86\Release\CpuGpuNames.csproj.CoreCompileInputs.cache
 D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\x86\Release\CpuGpuNames.exe
 D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\x86\Release\CpuGpuNames.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\CpuGpuNames.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\CpuGpuNames.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\CpuGpuNames.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\CpuGpuNames\obj\x86\Release\CpuGpuNames.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\CpuGpuNames\obj\x86\Release\CpuGpuNames.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\CpuGpuNames\obj\x86\Release\CpuGpuNames.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\CpuGpuNames\obj\x86\Release\CpuGpuNames.pdb

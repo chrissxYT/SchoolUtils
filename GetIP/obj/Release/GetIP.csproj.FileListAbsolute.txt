@@ -5,3 +5,10 @@ D:\workspace_VS\SchoolUtils\GetIP\obj\Release\GetIP.csprojAssemblyReference.cach
 D:\workspace_VS\SchoolUtils\GetIP\obj\Release\GetIP.csproj.CoreCompileInputs.cache
 D:\workspace_VS\SchoolUtils\GetIP\obj\Release\GetIP.exe
 D:\workspace_VS\SchoolUtils\GetIP\obj\Release\GetIP.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\AnyCpu\GetIP.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\AnyCpu\GetIP.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\AnyCpu\GetIP.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetIP\obj\Release\GetIP.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetIP\obj\Release\GetIP.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetIP\obj\Release\GetIP.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetIP\obj\Release\GetIP.pdb

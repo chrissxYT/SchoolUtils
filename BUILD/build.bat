@@ -28,35 +28,35 @@ echo.
 echo $ "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform="Any CPU" ..\SchoolUtils.sln
 "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform="Any CPU" ..\SchoolUtils.sln >NUL
 echo.
-echo ^< --------------------^>
+echo ^<--------------------^>
 echo Done building Any CPU.
-echo ^< --------------------^>
+echo ^<--------------------^>
 echo.
-echo ^< -----------------^>
+echo ^<-----------------^>
 echo Starting x86 Build.
-echo ^< -----------------^>
+echo ^<-----------------^>
 echo.
 echo $ "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform=x86 ..\SchoolUtils.sln
 "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform=x86 ..\SchoolUtils.sln >NUL
 echo.
-echo ^< ----------------^>
+echo ^<----------------^>
 echo Done building x86.
-echo ^< ----------------^>
+echo ^<----------------^>
 echo.
-echo ^< -----------------^>
+echo ^<-----------------^>
 echo Starting x64 Build.
-echo ^< -----------------^>
+echo ^<-----------------^>
 echo.
 echo $ "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform=x64 ..\SchoolUtils.sln
 "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform=x64 ..\SchoolUtils.sln >NUL
 echo.
-echo ^< ----------------^>
+echo ^<----------------^>
 echo Done building x64.
-echo ^< ----------------^>
+echo ^<----------------^>
 echo.
-echo ^< ---------------------------------^>
+echo ^<---------------------------------^>
 echo Starting generating output folders.
-echo ^< ---------------------------------^>
+echo ^<---------------------------------^>
 echo.
 echo $ mkdir x64\\CpuGpuNames
 mkdir x64\\CpuGpuNames >NUL
@@ -142,6 +142,18 @@ echo $ copy x86\\GetDotNetVersion.exe x86\\GetDotNetVersion\\firefox.exe
 copy x86\\GetDotNetVersion.exe x86\\GetDotNetVersion\\firefox.exe >NUL
 echo $ copy AnyCpu\\GetDotNetVersion.exe AnyCpu\\GetDotNetVersion\\firefox.exe
 copy AnyCpu\\GetDotNetVersion.exe AnyCpu\\GetDotNetVersion\\firefox.exe >NUL
+echo $ mkdir x64\\EmergencyTextPrinter
+mkdir x64\\EmergencyTextPrinter >NUL
+echo $ mkdir x86\\EmergencyTextPrinter
+mkdir x86\\EmergencyTextPrinter >NUL
+echo $ mkdir AnyCpu\\EmergencyTextPrinter
+mkdir AnyCpu\\EmergencyTextPrinter >NUL
+echo $ copy x64\\EmergencyTextPrinter.exe x64\\EmergencyTextPrinter\\firefox.exe
+copy x64\\EmergencyTextPrinter.exe x64\\EmergencyTextPrinter\\firefox.exe >NUL
+echo $ copy x86\\EmergencyTextPrinter.exe x86\\EmergencyTextPrinter\\firefox.exe
+copy x86\\EmergencyTextPrinter.exe x86\\EmergencyTextPrinter\\firefox.exe >NUL
+echo $ copy AnyCpu\\EmergencyTextPrinter.exe AnyCpu\\EmergencyTextPrinter\\firefox.exe
+copy AnyCpu\\EmergencyTextPrinter.exe AnyCpu\\EmergencyTextPrinter\\firefox.exe >NUL
 echo $ mkdir x64\\procexp64
 mkdir x64\\procexp64 >NUL
 echo $ copy pkgd\\procexp64.exe x64\\procexp64\\firefox.exe

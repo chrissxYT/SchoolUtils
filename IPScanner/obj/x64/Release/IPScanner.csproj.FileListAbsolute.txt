@@ -8,3 +8,10 @@ D:\workspace_VS\SchoolUtils\IPScanner\obj\x64\Release\IPScanner.pdb
 D:\workspace_VS\SchoolUtils\BUILD\x64\IPScanner.exe.config
 D:\workspace_VS\SchoolUtils\BUILD\x64\IPScanner.exe
 D:\workspace_VS\SchoolUtils\BUILD\x64\IPScanner.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\IPScanner.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\IPScanner.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\IPScanner.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\IPScanner\obj\x64\Release\IPScanner.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\IPScanner\obj\x64\Release\IPScanner.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\IPScanner\obj\x64\Release\IPScanner.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\IPScanner\obj\x64\Release\IPScanner.pdb

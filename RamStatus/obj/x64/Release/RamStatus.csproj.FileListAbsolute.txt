@@ -12,3 +12,10 @@ D:\workspace_VS\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.csprojAssemblyRe
 D:\workspace_VS\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.csproj.CoreCompileInputs.cache
 D:\workspace_VS\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.exe
 D:\workspace_VS\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\RamStatus.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\RamStatus.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\RamStatus.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\RamStatus\obj\x64\Release\RamStatus.pdb

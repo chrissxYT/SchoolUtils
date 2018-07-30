@@ -1,0 +1,7 @@
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\EmergencyTextPrinter.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\EmergencyTextPrinter.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\EmergencyTextPrinter.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\EmergencyTextPrinter\obj\x86\Release\EmergencyTextPrinter.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\EmergencyTextPrinter\obj\x86\Release\EmergencyTextPrinter.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\EmergencyTextPrinter\obj\x86\Release\EmergencyTextPrinter.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\EmergencyTextPrinter\obj\x86\Release\EmergencyTextPrinter.pdb

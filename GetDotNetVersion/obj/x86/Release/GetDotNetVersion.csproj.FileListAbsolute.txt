@@ -5,3 +5,10 @@ D:\workspace_VS\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.cs
 D:\workspace_VS\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.exe
 D:\workspace_VS\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.pdb
 D:\workspace_VS\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\GetDotNetVersion.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\GetDotNetVersion.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x86\GetDotNetVersion.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetDotNetVersion\obj\x86\Release\GetDotNetVersion.pdb

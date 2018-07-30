@@ -11,3 +11,10 @@ D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.csprojAssemblyRe
 D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.csproj.CoreCompileInputs.cache
 D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.exe
 D:\workspace_VS\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\AnyCpu\CpuGpuNames.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\AnyCpu\CpuGpuNames.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\AnyCpu\CpuGpuNames.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\CpuGpuNames\obj\Release\CpuGpuNames.pdb

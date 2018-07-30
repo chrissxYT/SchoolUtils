@@ -8,3 +8,10 @@ D:\workspace_VS\SchoolUtils\GetIP\obj\x64\Release\GetIP.pdb
 D:\workspace_VS\SchoolUtils\BUILD\x64\GetIP.exe.config
 D:\workspace_VS\SchoolUtils\BUILD\x64\GetIP.exe
 D:\workspace_VS\SchoolUtils\BUILD\x64\GetIP.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\GetIP.exe.config
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\GetIP.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\BUILD\x64\GetIP.pdb
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetIP\obj\x64\Release\GetIP.csprojAssemblyReference.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetIP\obj\x64\Release\GetIP.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetIP\obj\x64\Release\GetIP.exe
+C:\Users\chrissx\Documents\GitHub\SchoolUtils\GetIP\obj\x64\Release\GetIP.pdb
