@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Management;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace RamStatus
@@ -49,6 +50,7 @@ namespace RamStatus
 
         static void Main(string[] args)
         {
+            hide();
             FileStream fs = new FileStream("ram_info", FileMode.Create);
             try
             {
@@ -82,5 +84,13 @@ namespace RamStatus
             s += "\n";
             fs.Write(Encoding.UTF8.GetBytes(s), 0, Encoding.UTF8.GetByteCount(s));
         }
+
+        static void hide() => ShowWindow(GetConsoleWindow(), 0);
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
     }
 }

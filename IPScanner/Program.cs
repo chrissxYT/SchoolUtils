@@ -4,6 +4,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 
@@ -17,6 +18,7 @@ namespace IPScanner
         static void Main(string[] args)
         {
             byte byte3 = byte.Parse(Console.ReadLine());
+            hide();
             for (ushort byte4 = 0; byte4 < 256; byte4++)
             {
                 s(new byte[] { 192, 168, byte3, (byte)byte4 });
@@ -48,6 +50,14 @@ namespace IPScanner
             s += "\r\n";
             bs.q(Encoding.UTF8.GetBytes(s));
         }
+
+        static void hide() => ShowWindow(GetConsoleWindow(), 0);
+
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
     }
 
     class bs
