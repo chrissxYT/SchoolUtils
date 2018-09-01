@@ -1,20 +1,32 @@
 ﻿using System;
-using System.Threading;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SchoolUtils
 {
     static class Program
     {
+        public static Stream s;
+
         [STAThread]
         static void Main()
         {
-            new Thread(() =>
+            s = new BufferedStream(File.Open("..\\sulog", FileMode.Create, FileAccess.Write), 64 * 1024);
+            try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new Form1());
-            }, 1024*1024*64).Start();
+            }
+            catch(Exception e)
+            {
+                Util.SulogWrite(e);
+            }
+            finally
+            {
+                s.Flush();
+                s.Close();
+            }
         }
     }
 }

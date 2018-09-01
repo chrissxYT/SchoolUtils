@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Drawing.Printing;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Text;
+using static System.Text.Encoding;
+using static System.Drawing.Printing.PrinterSettings;
+using static System.IO.File;
+using static System.IO.FileAccess;
 
 namespace ListPrinters
 {
@@ -10,14 +12,12 @@ namespace ListPrinters
     {
         static void Main(string[] args)
         {
-            hide();
-            FileStream fs = new FileStream("printers", FileMode.Create);
-            foreach (string printer in PrinterSettings.InstalledPrinters)
+            ShowWindow(GetConsoleWindow(), 0);
+            Stream fs = Open("printers", FileMode.Create, Write);
+            foreach (string printer in InstalledPrinters)
                 fs.w(printer);
             fs.Close();
         }
-
-        static void hide() => ShowWindow(GetConsoleWindow(), 0);
 
         [DllImport("user32.dll")]
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
@@ -25,10 +25,12 @@ namespace ListPrinters
         [DllImport("kernel32.dll")]
         static extern IntPtr GetConsoleWindow();
 
-        static void w(this FileStream fs, string s)
+        static byte[] lf = UTF8.GetBytes("\n");
+
+        static void w(this Stream fs, string s)
         {
-            s += "\n";
-            fs.Write(Encoding.UTF8.GetBytes(s), 0, Encoding.UTF8.GetByteCount(s));
+            fs.Write(UTF8.GetBytes(s), 0, UTF8.GetByteCount(s));
+            fs.Write(lf, 0, 1);
         }
     }
 }

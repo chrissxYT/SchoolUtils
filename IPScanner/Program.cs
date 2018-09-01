@@ -1,28 +1,32 @@
-﻿using System;
+﻿//scans for open internal "legacy ip" (IPv4) devices
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
+using static System.Text.Encoding;
+using static System.Console;
 
 namespace IPScanner
 {
     class Program
     {
-        static volatile bs o = new bs("open_ips.gz", 32767);
-        static volatile bs c = new bs("closed_ips.gz", 32767);
+        static volatile bs o = new bs("open_ips.gz");
+        static volatile bs c = new bs("closed_ips.gz");
+        static volatile List<Thread> t = new List<Thread>();
 
         static void Main(string[] args)
         {
-            byte byte3 = byte.Parse(Console.ReadLine());
-            hide();
+            byte byte3 = byte.Parse(ReadLine());
+            ShowWindow(GetConsoleWindow(), 0);
             for (ushort byte4 = 0; byte4 < 256; byte4++)
-            {
                 s(new byte[] { 192, 168, byte3, (byte)byte4 });
-            }
+            foreach (Thread t in t)
+                while (t.ThreadState == ThreadState.Running)
+                    Thread.Sleep(1);
             o.f();
             o.c();
             c.f();
@@ -31,27 +35,27 @@ namespace IPScanner
 
         static void s(byte[] ip)
         {
-            new Thread(() =>
+            Thread u = new Thread(() =>
             {
                 try
                 {
                     PingReply pr = new Ping().Send(new IPAddress(ip));
-                    w(pr.Status == IPStatus.Success ? o : c, $"{pr.Address} {(int)pr.Status}");
+                    w(pr.Status == IPStatus.Success ? o : c, $"{pr.Address} {(int)pr.Status} {pr.Status.ToString().ToUpper()}");
                 }
                 catch (Exception e)
                 {
                     w(c, e.ToString());
                 }
-            }).Start();
+            });
+            u.Start();
+            t.Add(u);
         }
 
         static void w(bs bs, string s)
         {
-            s += "\r\n";
-            bs.q(Encoding.UTF8.GetBytes(s));
+            s += "\n";
+            bs.q(UTF8.GetBytes(s));
         }
-
-        static void hide() => ShowWindow(GetConsoleWindow(), 0);
 
         [DllImport("user32.dll")]
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
@@ -65,23 +69,21 @@ namespace IPScanner
         BufferedStream s;
         List<byte[]> b;
 
-        public bs(string f, int ibs)
+        public bs(string f)
         {
-            s = new BufferedStream(new GZipStream(new FileStream(f, FileMode.Create), CompressionLevel.Optimal, false), ibs);
+            s = new BufferedStream(new GZipStream(new FileStream(f, FileMode.Create), CompressionLevel.Optimal, false), 32767);
             b = new List<byte[]>();
         }
 
-        public void q(byte[] b)
+        public void q(byte[] c)
         {
-            this.b.Add(b);
+            b.Add(c);
         }
 
         public void f()
         {
             foreach(byte[] b in b)
-            {
                 s.Write(b, 0, b.Length);
-            }
             s.Flush();
         }
 

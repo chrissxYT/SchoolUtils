@@ -2,7 +2,7 @@
 using System.IO;
 using System.Management;
 using System.Runtime.InteropServices;
-using System.Text;
+using static System.Text.Encoding;
 
 namespace GetIP
 {
@@ -10,7 +10,7 @@ namespace GetIP
     {
         static void Main(string[] args)
         {
-            hide();
+            ShowWindow(GetConsoleWindow(), 0);
             FileStream fs = new FileStream("your_ips", FileMode.Create);
 
             foreach (ManagementObject mo in new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_NetworkAdapterConfiguration").Get())
@@ -20,7 +20,7 @@ namespace GetIP
                     fs.w("Caption: " + mo["Caption"]);
                     fs.w("Description: " + mo["Description"]);
                     fs.w("ServiceName: " + mo["ServiceName"]);
-                    foreach (string i in (String[])mo["IPAddress"])
+                    foreach (string i in (string[])mo["IPAddress"])
                         fs.w("Address: " + i);
                 }
                 catch(Exception e)
@@ -35,11 +35,9 @@ namespace GetIP
 
         static void w(this FileStream fs, string s)
         {
-            s += "\r\n";
-            fs.Write(Encoding.UTF8.GetBytes(s), 0, Encoding.UTF8.GetByteCount(s));
+            s += "\n";
+            fs.Write(UTF8.GetBytes(s), 0, UTF8.GetByteCount(s));
         }
-
-        static void hide() => ShowWindow(GetConsoleWindow(), 0);
 
         [DllImport("user32.dll")]
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);

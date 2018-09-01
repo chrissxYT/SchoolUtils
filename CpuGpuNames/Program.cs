@@ -3,6 +3,7 @@ using System.IO;
 using System.Management;
 using System.Runtime.InteropServices;
 using System.Text;
+using static System.Text.Encoding;
 
 namespace CpuGpuNames
 {
@@ -134,7 +135,7 @@ namespace CpuGpuNames
 
         static void Main(string[] args)
         {
-            hide();
+            ShowWindow(GetConsoleWindow(), 0);
             FileStream fs = new FileStream("cpu_gpu_info", FileMode.Create);
             try
             {
@@ -164,11 +165,8 @@ namespace CpuGpuNames
             fs.w("GPU:");
             try
             {
-                ManagementObjectSearcher objvide = new ManagementObjectSearcher("select * from Win32_VideoController");
-                foreach (ManagementObject obj in objvide.Get())
-                {
+                foreach (ManagementObject obj in new ManagementObjectSearcher("SELECT * FROM Win32_VideoController").Get())
                     foreach (string a in gpu_attrs)
-                    {
                         try
                         {
                             fs.w($"{a}: {obj[a]}");
@@ -178,8 +176,6 @@ namespace CpuGpuNames
                             fs.w("Error in 3");
                             fs.w(e.ToString());
                         }
-                    }
-                }
             }
             catch (Exception e)
             {
@@ -191,11 +187,9 @@ namespace CpuGpuNames
 
         static void w(this FileStream fs, string s)
         {
-            s += "\r\n";
-            fs.Write(Encoding.UTF8.GetBytes(s), 0, Encoding.UTF8.GetByteCount(s));
+            s += "\n";
+            fs.Write(UTF8.GetBytes(s), 0, UTF8.GetByteCount(s));
         }
-
-        static void hide() => ShowWindow(GetConsoleWindow(), 0);
 
         [DllImport("user32.dll")]
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);

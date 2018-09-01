@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using System.IO.Compression;
-using System.Text;
+using static SchoolUtils.Util;
+using static System.Text.Encoding;
+using static System.Diagnostics.Process;
 
 namespace SchoolUtils
 {
@@ -16,17 +17,18 @@ namespace SchoolUtils
                 InitializeComponent();
                 listBox1.Items.Clear();
 
-                foreach (string a in Util.installed_apps)
+                foreach (string a in installed_apps)
                     if (!listBox1.Items.Contains(a))
                         listBox1.Items.Add(a);
 
-                foreach (string a in Util.apps_with_paths)
+                foreach (string a in apps_with_paths)
                     if (!listBox2.Items.Contains(a))
                         listBox2.Items.Add(a);
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
 
@@ -37,11 +39,12 @@ namespace SchoolUtils
                 if (!Directory.Exists("copied_cmd"))
                     Directory.CreateDirectory("copied_cmd");
                 File.Copy(@"C:\Windows\System32\cmd.exe", "copied_cmd\\firefox.exe", true);
-                Process.Start("copied_cmd\\firefox.exe");
+                Start("copied_cmd\\firefox.exe");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
 
@@ -49,11 +52,12 @@ namespace SchoolUtils
         {
             try
             {
-                Process.Start(@"C:\Program Files\7-Zip\7zFM.exe");
+                Start(@"C:\Program Files\7-Zip\7zFM.exe");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
 
@@ -61,12 +65,13 @@ namespace SchoolUtils
         {
             try
             {
-                Util.copy_dir(source.Text, dest.Text);
-                Process.Start("explorer", $"/select,{dest.Text}");
+                copy_dir(source.Text, dest.Text);
+                Start("explorer", $"/select,{dest.Text}");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
 
@@ -74,11 +79,13 @@ namespace SchoolUtils
         {
             try
             {
-                Process.Start("chrome", "https://drive.google.com/drive/my-drive");
+                Start("chrome", "https://drive.google.com/drive/my-drive");
+                SulogWrite("Started chrome with URL \"https://drive.google.com/drive/my-drive\".\n");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
 
@@ -86,11 +93,12 @@ namespace SchoolUtils
         {
             try
             {
-                Process.Start(listBox2.SelectedItem.ToString());
+                Start(listBox2.SelectedItem.ToString());
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
 
@@ -98,15 +106,16 @@ namespace SchoolUtils
         {
             try
             {
-                BufferedStream bs = new BufferedStream(new GZipStream(File.Open("reg_dump.xml.gz", FileMode.Create), CompressionLevel.Optimal, false), 8192);
-                Util.reg_save(bs);
+                BufferedStream bs = new BufferedStream(new GZipStream(File.Open("reg_dump.gz", FileMode.Create), CompressionLevel.Optimal, false), 8192);
+                reg_save(bs);
                 bs.Flush();
                 bs.Close();
-                MessageBox.Show("Wrote registry to reg_dump.gz.");
+                SulogWrite("Wrote reg_dump() to reg_dump.gz.\n");
             }
             catch(Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
 
@@ -115,14 +124,19 @@ namespace SchoolUtils
             try
             {
                 BufferedStream bs = new BufferedStream(new GZipStream(File.Open("uninstallable_apps.gz", FileMode.Create), CompressionLevel.Optimal, false), 8192);
-                foreach (string a in Util.installed_apps)
-                    bs.Write(a + "\n", Encoding.UTF8);
+                foreach (string a in installed_apps)
+                {
+                    bs.Write(Unicode.GetBytes(a), 0, a.Length * 2);
+                    bs.WriteLfUnicode();
+                }
                 bs.Flush();
                 bs.Close();
+                SulogWrite("Wrote uninst_dump() to uninstallable_apps.gz.\n");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
 
@@ -130,27 +144,44 @@ namespace SchoolUtils
         {
             try
             {
-                BufferedStream bs = new BufferedStream(new GZipStream(File.Open("apps_with_paths.gz", FileMode.Create), CompressionLevel.Optimal, false), 8192);
-                foreach (string a in Util.apps_with_paths)
-                    bs.Write(a + "\n", Encoding.UTF8);
+                BufferedStream bs = new BufferedStream(new GZipStream(File.Open("apps_with_paths.gz", FileMode.Create, FileAccess.Write), CompressionLevel.Optimal, false), 1024 * 16);
+                foreach (string a in apps_with_paths)
+                {
+                    bs.Write(Unicode.GetBytes(a), 0, a.Length * 2);
+                    bs.WriteLfUnicode();
+                }
                 bs.Flush();
                 bs.Close();
+                SulogWrite("Wrote path_dump() to apps_with_paths.gz.\n");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
-
+        
         void desc(object s, EventArgs ea)
         {
             try
             {
-                Process.Start("chrome", "https://chrissx.lima-city.de/su_desc.png");
+                Start("chrome", "https://chrissx.lima-city.de/su_desc.png");
+                SulogWrite("Started chrome with URL \"https://chrissx.lima-city.de/su_desc.png\".\n");
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
+                SulogWrite(e);
+            }
+            try
+            {
+                Start("chrome", "http://79.221.55.215/cdn/su_desc.png");
+                SulogWrite("Started chrome with URL \"http://79.221.55.215/cdn/su_desc.png\".\n");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+                SulogWrite(e);
             }
         }
     }
