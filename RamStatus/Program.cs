@@ -3,6 +3,7 @@ using System.IO;
 using System.Management;
 using System.Runtime.InteropServices;
 using System.Text;
+using static System.Text.Encoding;
 
 namespace RamStatus
 {
@@ -81,8 +82,7 @@ namespace RamStatus
 
         static void w(this FileStream fs, string s)
         {
-            s += "\n";
-            fs.Write(Encoding.UTF8.GetBytes(s), 0, Encoding.UTF8.GetByteCount(s));
+            fs.Write(UTF8.GetBytes(s + "\n"), 0, s.Length + 1);
         }
 
         [DllImport("user32.dll")]

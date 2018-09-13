@@ -9,52 +9,62 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using static System.Text.Encoding;
 using static System.Console;
+using static System.Threading.Thread;
 
 namespace IPScanner
 {
     class Program
     {
-        static volatile bs o = new bs("open_ips.gz");
-        static volatile bs c = new bs("closed_ips.gz");
-        static volatile List<Thread> t = new List<Thread>();
+        static bs o = new bs("open_ips");
+        static bs c = new bs("closed_ips");
+        static volatile int i = 0;
+        static object lck = new object();
 
         static void Main(string[] args)
         {
-            byte byte3 = byte.Parse(ReadLine());
             ShowWindow(GetConsoleWindow(), 0);
-            for (ushort byte4 = 0; byte4 < 256; byte4++)
-                s(new byte[] { 192, 168, byte3, (byte)byte4 });
-            foreach (Thread t in t)
-                while (t.ThreadState == ThreadState.Running)
-                    Thread.Sleep(1);
+            int j = 0;
+            for(short byte3 = 0; byte3 < 256; byte3++)
+                for (short byte4 = 0; byte4 < 256; byte4++)
+                {
+                    s(new byte[] { 192, 168, (byte)byte3, (byte)byte4 });
+                    if (j > 500)
+                    {
+                        j = 0;
+                        GC.Collect();
+                    }
+                    else
+                        j++;
+                    //while (i > 1000)
+                    //    ;
+                }
+            while (i > 0)
+                ;
             o.f();
             o.c();
             c.f();
             c.c();
         }
 
-        static void s(byte[] ip)
+        static async void s(byte[] ip)
         {
-            Thread u = new Thread(() =>
+            lock(lck)
             {
-                try
-                {
-                    PingReply pr = new Ping().Send(new IPAddress(ip));
-                    w(pr.Status == IPStatus.Success ? o : c, $"{pr.Address} {(int)pr.Status} {pr.Status.ToString().ToUpper()}");
-                }
-                catch (Exception e)
-                {
-                    w(c, e.ToString());
-                }
-            });
-            u.Start();
-            t.Add(u);
-        }
-
-        static void w(bs bs, string s)
-        {
-            s += "\n";
-            bs.q(UTF8.GetBytes(s));
+                i++;
+            }
+            try
+            {
+                PingReply pr = await new Ping().SendPingAsync(new IPAddress(ip));
+                (pr.Status == IPStatus.Success ? o : c).q(UTF8.GetBytes($"{pr.Address} {(int)pr.Status} {pr.Status}\n"));
+            }
+            catch (Exception e)
+            {
+                c.q(UTF8.GetBytes(e.ToString() + "\n"));
+            }
+            lock(lck)
+            {
+                i--;
+            }
         }
 
         [DllImport("user32.dll")]
@@ -66,30 +76,43 @@ namespace IPScanner
 
     class bs
     {
-        BufferedStream s;
+        Stream s;
         List<byte[]> b;
+        object lck = new object();
 
         public bs(string f)
         {
-            s = new BufferedStream(new GZipStream(new FileStream(f, FileMode.Create), CompressionLevel.Optimal, false), 32767);
-            b = new List<byte[]>();
+            lock(lck)
+            {
+                s = File.Open(f, FileMode.Create, FileAccess.Write);
+                b = new List<byte[]>();
+            }
         }
 
         public void q(byte[] c)
         {
-            b.Add(c);
+            lock (lck)
+            {
+                b.Add(c);
+            }
         }
 
         public void f()
         {
-            foreach(byte[] b in b)
-                s.Write(b, 0, b.Length);
-            s.Flush();
+            lock (lck)
+            {
+                foreach (byte[] b in b)
+                    s.Write(b, 0, b.Length);
+            }
         }
 
         public void c()
         {
-            s.Close();
+            lock (lck)
+            {
+                f();
+                s.Close();
+            }
         }
     }
 }

@@ -29,7 +29,7 @@ namespace ListPrinters
 
         static void w(this Stream fs, string s)
         {
-            fs.Write(UTF8.GetBytes(s), 0, UTF8.GetByteCount(s));
+            fs.Write(UTF8.GetBytes(s), 0, s.Length);
             fs.Write(lf, 0, 1);
         }
     }

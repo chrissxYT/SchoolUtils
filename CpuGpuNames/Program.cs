@@ -187,8 +187,7 @@ namespace CpuGpuNames
 
         static void w(this FileStream fs, string s)
         {
-            s += "\n";
-            fs.Write(UTF8.GetBytes(s), 0, UTF8.GetByteCount(s));
+            fs.Write(UTF8.GetBytes(s + "\n"), 0, s.Length + 1);
         }
 
         [DllImport("user32.dll")]

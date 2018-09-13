@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolUtils\BUILD\x64\Stealth.exe.config
+D:\workspace_VS\SchoolUtils\BUILD\x64\Stealth.exe
+D:\workspace_VS\SchoolUtils\BUILD\x64\Stealth.pdb
+D:\workspace_VS\SchoolUtils\Stealth\obj\x64\Release\Stealth.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\Stealth\obj\x64\Release\Stealth.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\Stealth\obj\x64\Release\Stealth.exe
+D:\workspace_VS\SchoolUtils\Stealth\obj\x64\Release\Stealth.pdb
