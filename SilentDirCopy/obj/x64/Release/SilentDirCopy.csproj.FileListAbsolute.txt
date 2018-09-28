@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolUtils\SilentDirCopy\bin\x64\Release\SilentDirCopy.exe.config
+D:\workspace_VS\SchoolUtils\SilentDirCopy\bin\x64\Release\SilentDirCopy.exe
+D:\workspace_VS\SchoolUtils\SilentDirCopy\bin\x64\Release\SilentDirCopy.pdb
+D:\workspace_VS\SchoolUtils\SilentDirCopy\obj\x64\Release\SilentDirCopy.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolUtils\SilentDirCopy\obj\x64\Release\SilentDirCopy.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolUtils\SilentDirCopy\obj\x64\Release\SilentDirCopy.exe
+D:\workspace_VS\SchoolUtils\SilentDirCopy\obj\x64\Release\SilentDirCopy.pdb

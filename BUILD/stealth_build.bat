@@ -38,10 +38,6 @@ echo $ mkdir stealth\\CpuGpuNames
 mkdir stealth\\CpuGpuNames >NUL
 echo $ cp x64\\CpuGpuNames.exe stealth\\CpuGpuNames\\firefox.exe
 copy x64\\CpuGpuNames.exe stealth\\CpuGpuNames\\firefox.exe >NUL
-echo $ mkdir stealth\\SchoolUtils
-mkdir stealth\\SchoolUtils >NUL
-echo $ cp x64\\SchoolUtils.exe stealth\\SchoolUtils\\firefox.exe
-copy x64\\SchoolUtils.exe stealth\\SchoolUtils\\firefox.exe >NUL
 echo $ mkdir stealth\\GetIP
 mkdir stealth\\GetIP >NUL
 echo $ cp x64\\GetIP.exe stealth\\GetIP\\firefox.exe
