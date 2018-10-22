@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 echo.
 echo ^<----------^>
 echo Cleaning up.
@@ -6,42 +6,20 @@ echo ^<----------^>
 echo.
 echo $ rmdir /S /Q x64
 rmdir /S /Q x64 >NUL
-echo $ rmdir /S /Q x86
-rmdir /S /Q x86 >NUL
-echo $ rmdir /S /Q AnyCpu
-rmdir /S /Q AnyCpu >NUL
 echo $ mkdir x64
 mkdir x64 >NUL
-echo $ mkdir x86
-mkdir x86 >NUL
-echo $ mkdir AnyCpu
-mkdir AnyCpu >NUL
+echo $ rmdir /S /Q stealth
+rmdir /S /Q stealth >NUL
+echo $ mkdir stealth
+mkdir stealth >NUL
+echo $ rmdir /S /Q su
+rmdir /S /Q su >NUL
+echo $ mkdir su
+mkdir su >NUL
 echo.
 echo ^<---------^>
 echo Cleaned up.
 echo ^<---------^>
-echo.
-echo ^<---------------------^>
-echo Starting Any CPU Build.
-echo ^<---------------------^>
-echo.
-echo $ "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform="Any CPU" ..\SchoolUtils.sln
-"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform="Any CPU" ..\SchoolUtils.sln >NUL
-echo.
-echo ^<--------------------^>
-echo Done building Any CPU.
-echo ^<--------------------^>
-echo.
-echo ^<-----------------^>
-echo Starting x86 Build.
-echo ^<-----------------^>
-echo.
-echo $ "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform=x86 ..\SchoolUtils.sln
-"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" /m /p:Configuration=Release /p:Platform=x86 ..\SchoolUtils.sln >NUL
-echo.
-echo ^<----------------^>
-echo Done building x86.
-echo ^<----------------^>
 echo.
 echo ^<-----------------^>
 echo Starting x64 Build.
@@ -58,113 +36,57 @@ echo ^<---------------------------------^>
 echo Starting generating output folders.
 echo ^<---------------------------------^>
 echo.
-echo $ mkdir x64\\CpuGpuNames
-mkdir x64\\CpuGpuNames >NUL
-echo $ mkdir x86\\CpuGpuNames
-mkdir x86\\CpuGpuNames >NUL
-echo $ mkdir AnyCpu\\CpuGpuNames
-mkdir AnyCpu\\CpuGpuNames >NUL
-echo $ copy x64\\CpuGpuNames.exe x64\\CpuGpuNames\\firefox.exe
-copy x64\\CpuGpuNames.exe x64\\CpuGpuNames\\firefox.exe >NUL
-echo $ copy x86\\CpuGpuNames.exe x86\\CpuGpuNames\\firefox.exe
-copy x86\\CpuGpuNames.exe x86\\CpuGpuNames\\firefox.exe >NUL
-echo $ copy AnyCpu\\CpuGpuNames.exe AnyCpu\\CpuGpuNames\\firefox.exe
-copy AnyCpu\\CpuGpuNames.exe AnyCpu\\CpuGpuNames\\firefox.exe >NUL
-echo $ mkdir x64\\SchoolUtils
-mkdir x64\\SchoolUtils >NUL
-echo $ mkdir x86\\SchoolUtils
-mkdir x86\\SchoolUtils >NUL
-echo $ mkdir AnyCpu\\SchoolUtils
-mkdir AnyCpu\\SchoolUtils >NUL
-echo $ copy x64\\SchoolUtils.exe x64\\SchoolUtils\\firefox.exe
-copy x64\\SchoolUtils.exe x64\\SchoolUtils\\firefox.exe >NUL
-echo $ copy x86\\SchoolUtils.exe x86\\SchoolUtils\\firefox.exe
-copy x86\\SchoolUtils.exe x86\\SchoolUtils\\firefox.exe >NUL
-echo $ copy AnyCpu\\SchoolUtils.exe AnyCpu\\SchoolUtils\\firefox.exe
-copy AnyCpu\\SchoolUtils.exe AnyCpu\\SchoolUtils\\firefox.exe >NUL
-echo $ mkdir x64\\GetIP
-mkdir x64\\GetIP >NUL
-echo $ mkdir x86\\GetIP
-mkdir x86\\GetIP >NUL
-echo $ mkdir AnyCpu\\GetIP
-mkdir AnyCpu\\GetIP >NUL
-echo $ copy x64\\GetIP.exe x64\\GetIP\\firefox.exe
-copy x64\\GetIP.exe x64\\GetIP\\firefox.exe >NUL
-echo $ copy x86\\GetIP.exe x86\\GetIP\\firefox.exe
-copy x86\\GetIP.exe x86\\GetIP\\firefox.exe >NUL
-echo $ copy AnyCpu\\GetIP.exe AnyCpu\\GetIP\\firefox.exe
-copy AnyCpu\\GetIP.exe AnyCpu\\GetIP\\firefox.exe >NUL
-echo $ mkdir x64\\IPScanner
-mkdir x64\\IPScanner >NUL
-echo $ mkdir x86\\IPScanner
-mkdir x86\\IPScanner >NUL
-echo $ mkdir AnyCpu\\IPScanner
-mkdir AnyCpu\\IPScanner >NUL
-echo $ copy x64\\IPScanner.exe x64\\IPScanner\\firefox.exe
-copy x64\\IPScanner.exe x64\\IPScanner\\firefox.exe >NUL
-echo $ copy x86\\IPScanner.exe x86\\IPScanner\\firefox.exe
-copy x86\\IPScanner.exe x86\\IPScanner\\firefox.exe >NUL
-echo $ copy AnyCpu\\IPScanner.exe AnyCpu\\IPScanner\\firefox.exe
-copy AnyCpu\\IPScanner.exe AnyCpu\\IPScanner\\firefox.exe >NUL
-echo $ mkdir x64\\RamStatus
-mkdir x64\\RamStatus >NUL
-echo $ mkdir x86\\RamStatus
-mkdir x86\\RamStatus >NUL
-echo $ mkdir AnyCpu\\RamStatus
-mkdir AnyCpu\\RamStatus >NUL
-echo $ copy x64\\RamStatus.exe x64\\RamStatus\\firefox.exe
-copy x64\\RamStatus.exe x64\\RamStatus\\firefox.exe >NUL
-echo $ copy x86\\RamStatus.exe x86\\RamStatus\\firefox.exe
-copy x86\\RamStatus.exe x86\\RamStatus\\firefox.exe >NUL
-echo $ copy AnyCpu\\RamStatus.exe AnyCpu\\RamStatus\\firefox.exe
-copy AnyCpu\\RamStatus.exe AnyCpu\\RamStatus\\firefox.exe >NUL
-echo $ mkdir x64\\ListPrinters
-mkdir x64\\ListPrinters >NUL
-echo $ mkdir x86\\ListPrinters
-mkdir x86\\ListPrinters >NUL
-echo $ mkdir AnyCpu\\ListPrinters
-mkdir AnyCpu\\ListPrinters >NUL
-echo $ copy x64\\ListPrinters.exe x64\\ListPrinters\\firefox.exe
-copy x64\\ListPrinters.exe x64\\ListPrinters\\firefox.exe >NUL
-echo $ copy x86\\ListPrinters.exe x86\\ListPrinters\\firefox.exe
-copy x86\\ListPrinters.exe x86\\ListPrinters\\firefox.exe >NUL
-echo $ copy AnyCpu\\ListPrinters.exe AnyCpu\\ListPrinters\\firefox.exe
-copy AnyCpu\\ListPrinters.exe AnyCpu\\ListPrinters\\firefox.exe >NUL
-echo $ mkdir x64\\GetDotNetVersion
-mkdir x64\\GetDotNetVersion >NUL
-echo $ mkdir x86\\GetDotNetVersion
-mkdir x86\\GetDotNetVersion >NUL
-echo $ mkdir AnyCpu\\GetDotNetVersion
-mkdir AnyCpu\\GetDotNetVersion >NUL
-echo $ copy x64\\GetDotNetVersion.exe x64\\GetDotNetVersion\\firefox.exe
-copy x64\\GetDotNetVersion.exe x64\\GetDotNetVersion\\firefox.exe >NUL
-echo $ copy x86\\GetDotNetVersion.exe x86\\GetDotNetVersion\\firefox.exe
-copy x86\\GetDotNetVersion.exe x86\\GetDotNetVersion\\firefox.exe >NUL
-echo $ copy AnyCpu\\GetDotNetVersion.exe AnyCpu\\GetDotNetVersion\\firefox.exe
-copy AnyCpu\\GetDotNetVersion.exe AnyCpu\\GetDotNetVersion\\firefox.exe >NUL
-echo $ mkdir x64\\EmergencyTextPrinter
-mkdir x64\\EmergencyTextPrinter >NUL
-echo $ mkdir x86\\EmergencyTextPrinter
-mkdir x86\\EmergencyTextPrinter >NUL
-echo $ mkdir AnyCpu\\EmergencyTextPrinter
-mkdir AnyCpu\\EmergencyTextPrinter >NUL
-echo $ copy x64\\EmergencyTextPrinter.exe x64\\EmergencyTextPrinter\\firefox.exe
-copy x64\\EmergencyTextPrinter.exe x64\\EmergencyTextPrinter\\firefox.exe >NUL
-echo $ copy x86\\EmergencyTextPrinter.exe x86\\EmergencyTextPrinter\\firefox.exe
-copy x86\\EmergencyTextPrinter.exe x86\\EmergencyTextPrinter\\firefox.exe >NUL
-echo $ copy AnyCpu\\EmergencyTextPrinter.exe AnyCpu\\EmergencyTextPrinter\\firefox.exe
-copy AnyCpu\\EmergencyTextPrinter.exe AnyCpu\\EmergencyTextPrinter\\firefox.exe >NUL
-echo $ mkdir x64\\procexp64
-mkdir x64\\procexp64 >NUL
-echo $ copy pkgd\\procexp64.exe x64\\procexp64\\firefox.exe
-copy pkgd\\procexp64.exe x64\\procexp64\\firefox.exe >NUL
-echo $ mkdir x86\\procexp
-mkdir x86\\procexp >NUL
-echo $ copy pkgd\\procexp.exe x86\\procexp\\firefox.exe
-copy pkgd\\procexp.exe x86\\procexp\\firefox.exe >NUL
+echo $ mkdir su\\CpuGpuNames
+mkdir su\\CpuGpuNames >NUL
+echo $ copy x64\\CpuGpuNames.exe su\\CpuGpuNames\\firefox.exe
+copy x64\\CpuGpuNames.exe su\\CpuGpuNames\\firefox.exe >NUL
+echo $ mkdir su\\SchoolUtils
+mkdir su\\SchoolUtils >NUL
+echo $ copy x64\\SchoolUtils.exe su\\SchoolUtils\\firefox.exe
+copy x64\\SchoolUtils.exe su\\SchoolUtils\\firefox.exe >NUL
+echo $ mkdir su\\GetIP
+mkdir su\\GetIP >NUL
+echo $ copy x64\\GetIP.exe su\\GetIP\\firefox.exe
+copy x64\\GetIP.exe su\\GetIP\\firefox.exe >NUL
+echo $ mkdir su\\IPScanner
+mkdir su\\IPScanner >NUL
+echo $ copy x64\\IPScanner.exe su\\IPScanner\\firefox.exe
+copy x64\\IPScanner.exe su\\IPScanner\\firefox.exe >NUL
+echo $ mkdir su\\RamStatus
+mkdir su\\RamStatus >NUL
+echo $ copy x64\\RamStatus.exe su\\RamStatus\\firefox.exe
+copy x64\\RamStatus.exe su\\RamStatus\\firefox.exe >NUL
+echo $ mkdir su\\ListPrinters
+mkdir su\\ListPrinters >NUL
+echo $ copy x64\\ListPrinters.exe su\\ListPrinters\\firefox.exe
+copy x64\\ListPrinters.exe su\\ListPrinters\\firefox.exe >NUL
+echo $ mkdir su\\GetDotNetVersion
+mkdir su\\GetDotNetVersion >NUL
+echo $ copy x64\\GetDotNetVersion.exe su\\GetDotNetVersion\\firefox.exe
+copy x64\\GetDotNetVersion.exe su\\GetDotNetVersion\\firefox.exe >NUL
+echo $ mkdir su\\EmergencyTextPrinter
+mkdir su\\EmergencyTextPrinter >NUL
+echo $ copy x64\\EmergencyTextPrinter.exe su\\EmergencyTextPrinter\\firefox.exe
+copy x64\\EmergencyTextPrinter.exe su\\EmergencyTextPrinter\\firefox.exe >NUL
+echo $ mkdir su\\SilentDirCopy
+mkdir su\\SilentDirCopy >NUL
+echo $ copy x64\\SilentDirCopy.exe su\\SilentDirCopy\\firefox.exe
+copy x64\\SilentDirCopy.exe su\\SilentDirCopy\\firefox.exe >NUL
+echo $ mkdir su\\procexp64
+mkdir su\\procexp64 >NUL
+echo $ copy pkgd\\procexp64.exe su\\procexp64\\firefox.exe
+copy pkgd\\procexp64.exe su\\procexp64\\firefox.exe >NUL
 echo.
-echo ^< -----------------------------^>
+echo ^<-----------------------------^>
 echo Done generating output folders.
-echo ^< -----------------------------^>
+echo ^<-----------------------------^>
 echo.
-pause
+echo ^<-------------------------------------^>
+echo Running stealth build dedicated script.
+echo ^<-------------------------------------^>
+echo.
+call stealth_build.bat
+echo.
+echo ^<----------------^>
+echo Ran stealth build.
+echo ^<----------------^>

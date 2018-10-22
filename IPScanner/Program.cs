@@ -2,14 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.IO.Compression;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
-using System.Threading;
 using static System.Text.Encoding;
-using static System.Console;
-using static System.Threading.Thread;
 
 namespace IPScanner
 {
